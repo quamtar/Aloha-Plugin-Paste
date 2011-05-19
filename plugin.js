@@ -92,7 +92,8 @@ GENTICS.Aloha.PastePlugin.getPastedContent = function() {
 		this.pasteHandlers[i].handlePaste(this.pasteDiv);
 	}
 
-	// TODO collapse the range or remove the currently selected DOM
+	// delete currently selected contents
+	this.currentRange.deleteContents();
 
 	// insert the content into the editable at the current range
 	if (this.currentRange && this.currentEditable) {
